@@ -1,6 +1,6 @@
 
-
-<div class="container">
+{{contact}}
+<div class="container" ng-hide="contact">
   <div class="row">
     <div class="col-xs-3 col-xs-offset-9">
       <div class="input-group">
@@ -46,6 +46,48 @@
       </div>
       <div class="panel-footer">
         <a href="#more">...עוד מוצרים בקטגוריה</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" ng-controller="ContactCtrl" ng-show="contact">
+  <div class="row pull-right text-right">
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        צור קשר
+      </div>
+      <div class="panel-body ">
+        <p>
+          טלפון :0528365777
+        </p>
+        <p>
+          רחוב הינשוף 5 נהלל
+        </p>
+        <p>שעות פעילות 10:00 - 12:00
+        </p>
+        <strong>
+          -לתגובות
+        </strong>
+        <form>
+          <span>שם פרטי</span>
+          <br>
+          <input type="text" class="text-right" ng-model="user.firstName" required><br>
+          <span>שם משפחה</span>
+          <br>
+          <input type="text" class="text-right" ng-model="user.lastName" required><br>
+          <span>דואר אלקטרוני</span>
+          <br>
+          <input type="email" class="text-right" ng-model="user.email" required>
+          <br><br>
+          <button class="btn btn-info">SUBMIT</button>
+        </form>
+        <!--<p>form = {{user}}</p>-->
+        <!--<p>{{user.firstName.$valid}}</p>-->
+        <!--<p>{{user.lastName.$valid}}</p>-->
+        <!--<p>{{user.email.$valid}}</p>-->
       </div>
     </div>
   </div>

@@ -9,6 +9,10 @@
  */
 angular.module('mockApp')
   .controller('MainCtrl', function ($scope) {
+    $scope.contact = false;
+    $scope.MoveToContact = function() {
+      console.log("zzzz....zzz");
+    };
     $scope.data = [
       {
         name:"מחשבים",
