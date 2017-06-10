@@ -17,7 +17,7 @@
          ng-if="rowIndex%2 == $index%2">
       <div class="panel-heading text-right" style="height: 250px;">
         {{category.name}}
-        <a href="#{{category.name}}"><img src="{{category.mainImage}}" class="col-xs-12" height="200px"></a>
+        <a href="#{{category.name}}"><img ng-src="{{category.mainImage}}" class="col-xs-12" height="200px"></a>
       </div>
       <div class="panel-body ">
         <p class="text-right">:מוצרים נבחרים</p>
@@ -37,7 +37,7 @@
               </span>
             </div>
             <div class="panel-body"  ng-class="{'bg-warning': hover}">
-              <a href=""><img class="col-xs-12 img-rounded" src="{{category.itemImage}}" alt=""></a>
+              <a href=""><img class="col-xs-12 img-rounded" ng-src="{{category.itemImage}}" alt=""></a>
               <p class="text-right">תיאור מוצר </p>
               <a href="product">לקנייה</a>
             </div>
